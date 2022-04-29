@@ -1,0 +1,69 @@
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+      $map: map-get($map, $key);
+    }
+    @return $map;
+}
+  
+@function get-color($color, $weight: 500, $palette: $color-map) {
+    @if map-get($palette, $color) {
+        @if map-deep-get($palette, $color, $weight) {
+        @return map-deep-get($palette, $color, $weight);
+        } @else {
+            @error "'#{$weight}' was not found in '#{$palette}' => #{$color}. Are you sure it's a valid color weight?";
+        }
+    } @else {
+        @error "'#{$color}' was not found in '#{$palette}'. Are you sure it's a valid color?";
+    }
+}
+
+@function tint($color, $percent) {
+    @return mix(white, $color, $percent);
+}
+  
+@function shade($color, $percent) {
+    @return mix(black, $color, $percent);
+}
+
+$purple: #bf80ff;
+$teal: #72d1d5;
+$green: #05a455;
+
+$color-map: (
+  purple: (
+    10: tint($purple, 48%),
+    100: tint($purple, 24%),
+    200: tint($purple, 16%),
+    300: tint($purple, 12%),
+    400: tint($purple, 8%),
+    500: $purple,
+    600: shade($purple, 4%),
+    700: shade($purple, 8%),
+    800: shade($purple, 16%),
+    900: shade($purple, 24%),
+  ),
+  teal: (
+    10: tint($teal, 48%),
+    100: tint($teal, 24%),
+    200: tint($teal, 16%),
+    300: tint($teal, 12%),
+    400: tint($teal, 8%),
+    500: $teal,
+    600: shade($teal, 4%),
+    700: shade($teal, 8%),
+    800: shade($teal, 16%),
+    900: shade($teal, 24%),
+  ),
+  green: (
+    10: tint($green, 48%),
+    100: tint($green, 24%),
+    200: tint($green, 16%),
+    300: tint($green, 12%),
+    400: tint($green, 8%),
+    500: $green,
+    600: shade($green, 4%),
+    700: shade($green, 8%),
+    800: shade($green, 16%),
+    900: shade($green, 24%),
+  ),  
+) !default;
