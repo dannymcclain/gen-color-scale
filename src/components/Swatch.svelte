@@ -34,6 +34,7 @@ let hex;
     .swatch {
         aspect-ratio: 1;
         width: 100%;
+        min-width: 8rem;
         height: auto;
         padding: 0;
         margin: 0;
