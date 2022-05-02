@@ -197,7 +197,6 @@
                 {name: '050', color: '#F5F8FA', ratio: getRatio('#F5F8FA')},
             ]
         },
-       
         ];
 </script>
 
