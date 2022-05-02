@@ -177,7 +177,24 @@
             ]
         },
        
+        ];
+
+    let palette2 = [
+        { swatch: 'Red', colors: 
+            [
+        {name: "0", color: "#ffeaec"},
+        {name: "10", color: "#fdbdc2"},
+        {name: "20", color: "#f89198"},
+        {name: "30", color: "#f06c74"},
+        {name: "40", color: "#e44e58"},
+        {name: "50", color: "#d0313c"},
+        {name: "60", color: "#b71c27"},
+        {name: "70", color: "#970e17"},
+        {name: "80", color: "#73060d"},
+        {name: "90", color: "#4d0207"}
     ]
+        }
+    ]    
 </script>
 
 <style lang="scss">
@@ -194,6 +211,16 @@
     }
 </style>
 
+{#each palette2 as swatch}
+    <div>
+        <!-- <h1>{swatch.swatch}</h1> -->
+        <section>
+            {#each swatch.colors as {name, color}}
+                <Swatch name="{swatch.swatch}-{name}" color={color} />
+            {/each}
+        </section>
+    </div>
+{/each}
 {#each palette as swatch}
     <div>
         <!-- <h1>{swatch.swatch}</h1> -->
@@ -204,6 +231,7 @@
         </section>
     </div>
 {/each}
+
 
 <!-- <section>
     {#each pink as {name, color}}
