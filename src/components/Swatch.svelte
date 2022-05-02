@@ -1,6 +1,10 @@
 <script>
 export let name;
 export let color;
+export let ratio;
+
+let formattedName = name.toLowerCase();
+let formattedColor = color.toUpperCase();
 </script>
 
 <section style="--color: {color}">
@@ -9,8 +13,9 @@ export let color;
         style="background: {color}"
     ></div>
     <div class="details">
-        <h2>{name}</h2>
-        <p>{color}</p>
+        <h2>{formattedName}</h2>
+        <p>{formattedColor}</p>
+        <p>{ratio}</p>
     </div>
 </section>
 
@@ -42,6 +47,7 @@ export let color;
         font-size: 1rem;
         font-weight: 700;
     }
+
     p {
         font-size: .75rem;
         margin: 0;

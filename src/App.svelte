@@ -3,16 +3,65 @@
 </script>
 
 <main>
-	<h1>Generated color scale</h1>
-	<p style="margin-bottom: 4rem;">I plugged some hand-picked swatch colors (the 500's) into <a href="https://hihayk.github.io/scale/#4/6/50/80/-51/67/20/14/1D9A6C/29/154/108/white">Scale</a> to generate the rest of the palette.</p>
+	<section>
+		<h1>Generated color scale</h1>
+		<p>I plugged some hand-picked swatch colors (the 500's) into <a href="https://hihayk.github.io/scale/#4/6/50/80/-51/67/20/14/1D9A6C/29/154/108/white">Scale</a> to generate the rest of the palette.</p>
+		<p>I also used <a href="https://github.com/bgrins/TinyColor">tinycolor.js</a> to compute the contrast ratio of each swatch (against white).</p> 
+	</section>
+	<section>
+		<h2>Scale Settings I used</h2>
+		<ul>
+			<li>Dark Colors Amount: <code>4</code></li>
+			<li>Darkness: <code>84%</code></li>
+			<li>Dark Color Hue Angle: <code>0</code></li>
+			<li>Dark Colors Saturation: <code>80%</code></li>
+			<li>Light Colors Amount: <code>5</code></li>
+			<li>Lightness: <code>90%</code></li>
+			<li>Light Color Hue Angle: <code>0</code></li>
+			<li>Light Colors Saturation: <code>80%</code></li>
+		</ul>
+	</section>
+	
 	<SwatchList />
 </main>
 
 <style lang="scss">
+	h1, h2 {
+		font-weight: 700;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	h2 {
+		font-size: 1.5rem;
+	}
 	main {
 		text-align: left;
 		padding: 4em;
 		margin: 0 auto;
+	}
+
+	section {
+		margin-bottom: 4rem;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	li:not(:last-child) {
+		margin-bottom: .25rem;
+	}
+
+	code {
+		font-family: inherit;
+		font-weight: 700;
 	}
 
 	@media (min-width: 640px) {
