@@ -1,9 +1,6 @@
 <script>
 export let name;
 export let color;
-// export let hex;
-
-let hex;
 </script>
 
 <section style="--color: {color}">
@@ -24,13 +21,12 @@ let hex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        border-radius: 8px;
-        border: 1px solid #f5f5f5;
-        padding: .25rem;
     }
+
     .details {
-        padding: .5rem;
+        margin-top: .5rem;
     }
+
     .swatch {
         aspect-ratio: 1;
         width: 100%;
@@ -38,16 +34,16 @@ let hex;
         height: auto;
         padding: 0;
         margin: 0;
-        border-radius: 4px;
     }
 
     h2 {
         margin: 0;
         padding: 0;
-        font-size: 1.25rem;
-        // font-weight: 800;
+        font-size: 1rem;
+        font-weight: 700;
     }
     p {
+        font-size: .75rem;
         margin: 0;
         padding: 0;
         color: #999;

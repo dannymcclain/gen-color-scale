@@ -1,77 +1,73 @@
 <script>
     import Swatch from './Swatch.svelte'
+    import tinycolor from '../tinycolor'
 
     let palette = [
         { swatch: 'Red', colors: 
             [
-                {name: '900', color: '#330407'},
-                {name: '800', color: '#660D14'},
-                {name: '700', color: '#991D25'},
-                {name: '600', color: '#C2323C'},
+                {name: '900', color: '#290306'},
+                {name: '800', color: '#5E0C12'},
+                {name: '700', color: '#941C24'},
+                {name: '600', color: '#C0323B'},
                 {name: '500', color: '#e44e58'},
-                {name: '400', color: '#F1616B'},
-                {name: '300', color: '#FA7880'},
-                {name: '200', color: '#FF9199'},
-                {name: '100', color: '#FFAEB4'},
-                {name: '050', color: '#FFCED1'},
-                {name: '025', color: '#FFF1F2'},
+                {name: '400', color: '#F3646E'},
+                {name: '300', color: '#FD7E87'},
+                {name: '200', color: '#FF9DA4'},
+                {name: '100', color: '#FFC0C5'},
+                {name: '050', color: '#FFE7E9'},
             ]
             },
         { swatch: 'Orange', colors: 
             [
-                {name: '900', color: '#331D06'},
-                {name: '800', color: '#663B11'},
-                {name: '700', color: '#995A23'},
-                {name: '600', color: '#CC7A3C'},
+                {name: '900', color: '#291704'},
+                {name: '800', color: '#5E3710'},
+                {name: '700', color: '#945722'},
+                {name: '600', color: '#CA783B'},
                 {name: '500', color: '#f69b5a'},
-                {name: '400', color: '#FFA96B'},
-                {name: '300', color: '#FFB87F'},
-                {name: '200', color: '#FFC797'},
-                {name: '100', color: '#FFD7B2'},
-                {name: '050', color: '#FFE8D0'},
-                {name: '025', color: '#FFF8F1'},
+                {name: '400', color: '#FFAB6E'},
+                {name: '300', color: '#FFBC85'},
+                {name: '200', color: '#FFCEA2'},
+                {name: '100', color: '#FFE1C3'},
+                {name: '050', color: '#FFF4E8'},
             ]
             },
         { swatch: 'Yellow', colors: [
-            {name: '900', color: '#332A02'},
-            {name: '800', color: '#66520B'},
-            {name: '700', color: '#99781B'},
-            {name: '600', color: '#CC9B32'},
+            {name: '900', color: '#292202'},
+            {name: '800', color: '#5E4C0B'},
+            {name: '700', color: '#94741A'},
+            {name: '600', color: '#CA9931'},
             {name: '500', color: '#f8bd4f'},
-            {name: '400', color: '#FFCA61'},
-            {name: '300', color: '#FFD677'},
-            {name: '200', color: '#FFE190'},
-            {name: '100', color: '#FFEBAD'},
-            {name: '050', color: '#FFF4CD'},
-            {name: '025', color: '#FFFCF0'},
+            {name: '400', color: '#FFCC64'},
+            {name: '300', color: '#FFDA7D'},
+            {name: '200', color: '#FFE69B'},
+            {name: '100', color: '#FFF1BF'},
+            {name: '050', color: '#FFFAE7'},
         ]
         },
         { swatch: 'Grass', colors: [
-            {name: '900', color: '#153300'},
-            {name: '800', color: '#2C6500'},
-            {name: '700', color: '#428D06'},
-            {name: '600', color: '#5AAF15'},
+            {name: '900', color: '#112900'},
+            {name: '800', color: '#285D00'},
+            {name: '700', color: '#408806'},
+            {name: '600', color: '#59AD15'},
             {name: '500', color: '#72cb2a'},
-            {name: '400', color: '#87DC42'},
-            {name: '300', color: '#9DEA5E'},
-            {name: '200', color: '#B3F57D'},
-            {name: '100', color: '#C9FCA0'},
-            {name: '050', color: '#DFFFC8'},
-            {name: '025', color: '#F6FFF0'},
+            {name: '400', color: '#8ADF46'},
+            {name: '300', color: '#A3EE66'},
+            {name: '200', color: '#BCF98B'},
+            {name: '100', color: '#D6FFB8'},
+            {name: '050', color: '#F0FFE6'},
         ]
         },
         { swatch: 'Green', colors: [
-            {name: '900', color: '#002E11'},
-            {name: '800', color: '#005522'},
-            {name: '700', color: '#007633'},
-            {name: '600', color: '#009044'},
+            {name: '900', color: '#00240E'},
+            {name: '800', color: '#004E20'},
+            {name: '700', color: '#007231'},
+            {name: '600', color: '#008E43'},
             {name: '500', color: '#05a455'},
-            {name: '400', color: '#28BB70'},
-            {name: '300', color: '#50CF8A'},
-            {name: '200', color: '#78E0A5'},
-            {name: '100', color: '#A0EDC0'},
-            {name: '050', color: '#C8F7DA'},
-            {name: '025', color: '#F0FDF5'},
+            {name: '400', color: '#2EBF74'},
+            {name: '300', color: '#5CD592'},
+            {name: '200', color: '#8AE7B1'},
+            {name: '100', color: '#B8F4D0'},
+            {name: '050', color: '#E6FCEE'},
         ]
         },
         { swatch: 'Teal', colors: [
@@ -206,10 +202,10 @@
     section {
         display: flex;
         flex-direction: row;
-        gap:1rem;
+        gap:.5rem;
     }
     div {
-        margin-bottom: 4rem;
+        margin-bottom: 1.25rem;
     }
 </style>
 
@@ -223,15 +219,3 @@
         </section>
     </div>
 {/each}
-
-
-<!-- <section>
-    {#each pink as {name, color}}
-        <Swatch name={name} color={color} />
-    {/each}
-</section>
-<section>
-    {#each purple as {name, color}}
-        <Swatch name={name} color={color} />
-    {/each}
-</section> -->
