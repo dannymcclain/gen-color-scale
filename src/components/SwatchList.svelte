@@ -7,220 +7,263 @@
             let ratio = Math.round((fullRatio + Number.EPSILON) * 100) / 100;
             return ratio;
         }
-
-    let palette = [
-        { swatch: 'Red', colors: 
+    
+        let colorPalette = [
+        { swatch: 'red', colors:
             [
-                {name: '900', color: '#290306', ratio: getRatio('#290306')},
-                {name: '800', color: '#5E0C12', ratio: getRatio('#5E0C12')},
-                {name: '700', color: '#941C24', ratio: getRatio('#941C24')},
-                {name: '600', color: '#C0323B', ratio: getRatio('#C0323B')},
-                {name: '500', color: '#e44e58', ratio: getRatio('#e44e58')},
-                {name: '400', color: '#F3646E', ratio: getRatio('#F3646E')},
-                {name: '300', color: '#FD7E87', ratio: getRatio('#FD7E87')},
-                {name: '200', color: '#FF9DA4', ratio: getRatio('#FF9DA4')},
-                {name: '100', color: '#FFC0C5', ratio: getRatio('#FFC0C5')},
-                {name: '050', color: '#FFE7E9', ratio: getRatio('#FFE7E9')},
+                {name: '900', color: '#470000', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#750007', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#A30814', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#D01B28', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#e93542', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#FB4C58', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#FF6874', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#FF8B94', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#FFB8BA', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#FFE6E6', get ratio() { return getRatio(this.color)}},
             ]
-            },
-        { swatch: 'Orange', colors: 
+        },
+        { swatch: 'orange', colors:
             [
-                {name: '900', color: '#291704', ratio: getRatio('#291704')},
-                {name: '800', color: '#5E3710', ratio: getRatio('#5E3710')},
-                {name: '700', color: '#945722', ratio: getRatio('#945722')},
-                {name: '600', color: '#CA783B', ratio: getRatio('#CA783B')},
-                {name: '500', color: '#f69b5a', ratio: getRatio('#f69b5a')},
-                {name: '400', color: '#FFAB6E', ratio: getRatio('#FFAB6E')},
-                {name: '300', color: '#FFBC85', ratio: getRatio('#FFBC85')},
-                {name: '200', color: '#FFCEA2', ratio: getRatio('#FFCEA2')},
-                {name: '100', color: '#FFE1C3', ratio: getRatio('#FFE1C3')},
-                {name: '050', color: '#FFF4E8', ratio: getRatio('#FFF4E8')},
-            ]
-            },
-        { swatch: 'Yellow', colors: [
-            {name: '900', color: '#292202', ratio: getRatio('#292202')},
-            {name: '800', color: '#5E4C0B', ratio: getRatio('#5E4C0B')},
-            {name: '700', color: '#94741A', ratio: getRatio('#94741A')},
-            {name: '600', color: '#CA9931', ratio: getRatio('#CA9931')},
-            {name: '500', color: '#f8bd4f', ratio: getRatio('#f8bd4f')},
-            {name: '400', color: '#FFCC64', ratio: getRatio('#FFCC64')},
-            {name: '300', color: '#FFDA7D', ratio: getRatio('#FFDA7D')},
-            {name: '200', color: '#FFE69B', ratio: getRatio('#FFE69B')},
-            {name: '100', color: '#FFF1BF', ratio: getRatio('#FFF1BF')},
-            {name: '050', color: '#FFFAE7', ratio: getRatio('#FFFAE7')},
-        ]
-        },
-        { swatch: 'Grass', colors: [
-            {name: '900', color: '#112900', ratio: getRatio('#112900')},
-            {name: '800', color: '#285D00', ratio: getRatio('#285D00')},
-            {name: '700', color: '#408806', ratio: getRatio('#408806')},
-            {name: '600', color: '#59AD15', ratio: getRatio('#59AD15')},
-            {name: '500', color: '#72cb2a', ratio: getRatio('#72cb2a')},
-            {name: '400', color: '#8ADF46', ratio: getRatio('#8ADF46')},
-            {name: '300', color: '#A3EE66', ratio: getRatio('#A3EE66')},
-            {name: '200', color: '#BCF98B', ratio: getRatio('#BCF98B')},
-            {name: '100', color: '#D6FFB8', ratio: getRatio('#D6FFB8')},
-            {name: '050', color: '#F0FFE6', ratio: getRatio('#F0FFE6')},
-        ]
-        },
-        { swatch: 'Green', colors: [
-            {name: '900', color: '#00240E', ratio: getRatio('#00240E')},
-            {name: '800', color: '#004E20', ratio: getRatio('#004E20')},
-            {name: '700', color: '#007231', ratio: getRatio('#007231')},
-            {name: '600', color: '#008E43', ratio: getRatio('#008E43')},
-            {name: '500', color: '#05a455', ratio: getRatio('#05a455')},
-            {name: '400', color: '#2EBF74', ratio: getRatio('#2EBF74')},
-            {name: '300', color: '#5CD592', ratio: getRatio('#5CD592')},
-            {name: '200', color: '#8AE7B1', ratio: getRatio('#8AE7B1')},
-            {name: '100', color: '#B8F4D0', ratio: getRatio('#B8F4D0')},
-            {name: '050', color: '#E6FCEE', ratio: getRatio('#E6FCEE')},
-        ]
-        },
-        { swatch: 'Teal', colors: [
-            {name: '900', color: '#0C2728', ratio: getRatio('#0C2728')},
-            {name: '800', color: '#1F575A', ratio: getRatio('#1F575A')},
-            {name: '700', color: '#378487', ratio: getRatio('#378487')},
-            {name: '600', color: '#52ACB0', ratio: getRatio('#52ACB0')},
-            {name: '500', color: '#72d1d5', ratio: getRatio('#72d1d5')},
-            {name: '400', color: '#85DFE3', ratio: getRatio('#85DFE3')},
-            {name: '300', color: '#9BEBEE', ratio: getRatio('#9BEBEE')},
-            {name: '200', color: '#B3F4F7', ratio: getRatio('#B3F4F7')},
-            {name: '100', color: '#CFFAFC', ratio: getRatio('#CFFAFC')},
-            {name: '050', color: '#EDFEFF', ratio: getRatio('#EDFEFF')},
-        ]
-        },
-        { swatch: 'Cyan', colors: [
-            {name: '900', color: '#002729', ratio: getRatio('#002729')},
-            {name: '800', color: '#07565E', ratio: getRatio('#07565E')},
-            {name: '700', color: '#158294', ratio: getRatio('#158294')},
-            {name: '600', color: '#2AA9CA', ratio: getRatio('#2AA9CA')},
-            {name: '500', color: '#47cdf5', ratio: getRatio('#47cdf5')},
-            {name: '400', color: '#5DDCFF', ratio: getRatio('#5DDCFF')},
-            {name: '300', color: '#77E9FF', ratio: getRatio('#77E9FF')},
-            {name: '200', color: '#97F2FF', ratio: getRatio('#97F2FF')},
-            {name: '100', color: '#BCF9FF', ratio: getRatio('#BCF9FF')},
-            {name: '050', color: '#E6FEFF', ratio: getRatio('#E6FEFF')},
-        ]
-        },
-        { swatch: 'Blue', colors: [
-            {name: '900', color: '#001829', ratio: getRatio('#001829')},
-            {name: '800', color: '#06375E', ratio: getRatio('#06375E')},
-            {name: '700', color: '#145794', ratio: getRatio('#145794')},
-            {name: '600', color: '#2A78CA', ratio: getRatio('#2A78CA')},
-            {name: '500', color: '#479aff', ratio: getRatio('#479aff')},
-            {name: '400', color: '#5CABFF', ratio: getRatio('#5CABFF')},
-            {name: '300', color: '#76BDFF', ratio: getRatio('#76BDFF')},
-            {name: '200', color: '#96CFFF', ratio: getRatio('#96CFFF')},
-            {name: '100', color: '#BBE1FF', ratio: getRatio('#BBE1FF')},
-            {name: '050', color: '#E6F4FF', ratio: getRatio('#E6F4FF')},
-        ]
-        },
-        { swatch: 'Violet', colors: [
-            {name: '900', color: '#120C29', ratio: getRatio('#120C29')},
-            {name: '800', color: '#2E215E', ratio: getRatio('#2E215E')},
-            {name: '700', color: '#4D3C94', ratio: getRatio('#4D3C94')},
-            {name: '600', color: '#6F5BCA', ratio: getRatio('#6F5BCA')},
-            {name: '500', color: '#9580ff', ratio: getRatio('#9580ff')},
-            {name: '400', color: '#A38FFF', ratio: getRatio('#A38FFF')},
-            {name: '300', color: '#B3A1FF', ratio: getRatio('#B3A1FF')},
-            {name: '200', color: '#C5B7FF', ratio: getRatio('#C5B7FF')},
-            {name: '100', color: '#DAD0FF', ratio: getRatio('#DAD0FF')},
-            {name: '050', color: '#F1EDFF', ratio: getRatio('#F1EDFF')},
-        ]
-        },
-        { swatch: 'Purple', colors: [
-                {name: '900', color: '#1F0C29', ratio: getRatio('#1F0C29')},
-                {name: '800', color: '#47215E', ratio: getRatio('#47215E')},
-                {name: '700', color: '#6F3C94', ratio: getRatio('#6F3C94')},
-                {name: '600', color: '#975BCA', ratio: getRatio('#975BCA')},
-                {name: '500', color: '#bf80ff', ratio: getRatio('#bf80ff')},
-                {name: '400', color: '#CB8FFF', ratio: getRatio('#CB8FFF')},
-                {name: '300', color: '#D6A1FF', ratio: getRatio('#D6A1FF')},
-                {name: '200', color: '#E1B7FF', ratio: getRatio('#E1B7FF')},
-                {name: '100', color: '#EDD0FF', ratio: getRatio('#EDD0FF')},
-                {name: '050', color: '#F9EDFF', ratio: getRatio('#F9EDFF')},
+                {name: '900', color: '#472200', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#753900', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#A35200', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#D16B12', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#fb862d', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#FF9A43', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#FFAE60', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#FFC48A', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#FFDAB8', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#FFF2E6', get ratio() { return getRatio(this.color)}},
             ]
         },
-    { swatch: 'Pink', colors: 
+        { swatch: 'yellow', colors:
             [
-                {name: '900', color: '#290F24', ratio: getRatio('#290F24')},
-                {name: '800', color: '#5E2652', ratio: getRatio('#5E2652')},
-                {name: '700', color: '#8E417D', ratio: getRatio('#8E417D')},
-                {name: '600', color: '#BA60A6', ratio: getRatio('#BA60A6')},
-                {name: '500', color: '#e283cd', ratio: getRatio('#e283cd')},
-                {name: '400', color: '#EE93DA', ratio: getRatio('#EE93DA')},
-                {name: '300', color: '#F6A6E4', ratio: getRatio('#F6A6E4')},
-                {name: '200', color: '#FCBCEE', ratio: getRatio('#FCBCEE')},
-                {name: '100', color: '#FFD4F6', ratio: getRatio('#FFD4F6')},
-                {name: '050', color: '#FFEFFC', ratio: getRatio('#FFEFFC')},
+                {name: '900', color: '#473D00', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#756000', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#A38000', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#D19E0E', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#ffb829', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#FFCA3F', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#FFDA5C', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#FFE88A', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#FFF3B8', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#FFFBE6', get ratio() { return getRatio(this.color)}},
             ]
         },
-    { swatch: 'Gray', colors: 
+        { swatch: 'grass', colors:
             [
-                {name: '900', color: '#1D1D1D', ratio: getRatio('#1D1D1D')},
-                {name: '800', color: '#424242', ratio: getRatio('#424242')},
-                {name: '700', color: '#686868', ratio: getRatio('#686868')},
-                {name: '600', color: '#8D8D8D', ratio: getRatio('#8D8D8D')},
-                {name: '500', color: '#b3b3b3', ratio: getRatio('#b3b3b3')},
-                {name: '400', color: '#C1C1C1', ratio: getRatio('#C1C1C1')},
-                {name: '300', color: '#CECECE', ratio: getRatio('#CECECE')},
-                {name: '200', color: '#DCDCDC', ratio: getRatio('#DCDCDC')},
-                {name: '100', color: '#EAEAEA', ratio: getRatio('#EAEAEA')},
-                {name: '050', color: '#F7F7F7', ratio: getRatio('#F7F7F7')},
+                {name: '900', color: '#1A4700', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#2A6D00', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#3B8B00', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#4DA300', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#5eb40e', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#7BCE2E', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#97E35C', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#B4F28A', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#D1FCB8', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#EFFFE6', get ratio() { return getRatio(this.color)}},
             ]
         },
-    { swatch: 'Slate', colors: 
+        { swatch: 'green', colors:
             [
-                {name: '900', color: '#18191C', ratio: getRatio('#18191C')},
-                {name: '800', color: '#393940', ratio: getRatio('#393940')},
-                {name: '700', color: '#5A5A64', ratio: getRatio('#5A5A64')},
-                {name: '600', color: '#7B7C87', ratio: getRatio('#7B7C87')},
-                {name: '500', color: '#9d9eaa', ratio: getRatio('#9d9eaa')},
-                {name: '400', color: '#AEAFBA', ratio: getRatio('#AEAFBA')},
-                {name: '300', color: '#BFC0CA', ratio: getRatio('#BFC0CA')},
-                {name: '200', color: '#D1D1D9', ratio: getRatio('#D1D1D9')},
-                {name: '100', color: '#E2E3E8', ratio: getRatio('#E2E3E8')},
-                {name: '050', color: '#F5F5F7', ratio: getRatio('#F5F5F7')},
+                {name: '900', color: '#003F09', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#005F11', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#00791B', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#008D28', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#039b36', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#2EB956', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#5CD178', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#8AE59C', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#B8F3C2', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#E6FCE9', get ratio() { return getRatio(this.color)}},
             ]
         },
-    { swatch: 'Mist', colors: 
+        { swatch: 'teal', colors:
             [
-                {name: '900', color: '#191E20', ratio: getRatio('#191E20')},
-                {name: '800', color: '#3B4549', ratio: getRatio('#3B4549')},
-                {name: '700', color: '#5D6B72', ratio: getRatio('#5D6B72')},
-                {name: '600', color: '#819199', ratio: getRatio('#819199')},
-                {name: '500', color: '#a6b7bf', ratio: getRatio('#a6b7bf')},
-                {name: '400', color: '#B4C5CC', ratio: getRatio('#B4C5CC')},
-                {name: '300', color: '#C4D2D9', ratio: getRatio('#C4D2D9')},
-                {name: '200', color: '#D3DFE4', ratio: getRatio('#D3DFE4')},
-                {name: '100', color: '#E4ECEF', ratio: getRatio('#E4ECEF')},
-                {name: '050', color: '#F5F8FA', ratio: getRatio('#F5F8FA')},
+                {name: '900', color: '#004747', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#007575', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#009CA2', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#0AB8BF', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#20CED5', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#42DCE3', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#67E8ED', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#8EF2F6', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#B9F9FB', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#E6FDFE', get ratio() { return getRatio(this.color)}},
             ]
         },
-        ];
+        { swatch: 'sky', colors:
+            [
+                {name: '900', color: '#003E47', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#006075', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#007FA3', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#0099D1', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#05b0fa', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#2EC6FF', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#5CD8FF', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#8AE7FF', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#B8F3FF', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#E6FCFF', get ratio() { return getRatio(this.color)}},
+            ]
+        },
+        { swatch: 'blue', colors:
+            [
+                {name: '900', color: '#002247', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#003975', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#0150A3', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#1369D1', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#2d82eb', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#4497FD', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#62ADFF', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#8AC3FF', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#B8DAFF', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#E6F2FF', get ratio() { return getRatio(this.color)}},
+            ]
+        },
+        { swatch: 'violet', colors:
+            [
+                {name: '900', color: '#1E1347', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#352675', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#503DA3', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#6E5AD1', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#8f7bf4', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#9D89FF', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#AE9CFF', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#C1B3FF', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#D7CDFF', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#F0ECFF', get ratio() { return getRatio(this.color)}},
+            ]
+        },
+        { swatch: 'purple', colors:
+            [
+                {name: '900', color: '#320E47', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#531D75', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#7333A3', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#934ED1', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#b36ef7', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#C17EFF', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#CF92FF', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#DCABFF', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#EAC8FF', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#F7EAFF', get ratio() { return getRatio(this.color)}},
+            ]
+        },
+        { swatch: 'pink', colors:
+            [
+                {name: '900', color: '#470E44', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#751D6C', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#A33291', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#D04DB3', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#ef6cd2', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#FC7CE0', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#FF91EB', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#FFAAF4', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#FFC8FA', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#FFEAFE', get ratio() { return getRatio(this.color)}},
+            ]
+        },
+        { swatch: 'gray', colors:
+            [
+                {name: '900', color: '#2F2F2F', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#4D4D4D', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#6C6C6C', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#8A8A8A', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#a8a8a8', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#B8B8B8', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#C7C7C7', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#D7D7D7', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#E7E7E7', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#F6F6F6', get ratio() { return getRatio(this.color)}},
+            ]
+        },
+        { swatch: 'slate', colors:
+            [
+                {name: '900', color: '#282931', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#43444F', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#5E606D', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#7A7C8A', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#9698a6', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#A8AAB7', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#BABCC8', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#CDCED8', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#E0E1E8', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#F4F4F7', get ratio() { return getRatio(this.color)}},
+            ]
+        },
+        { swatch: 'mist', colors:
+            [
+                {name: '900', color: '#273237', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#42525A', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#5E717A', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#7B909A', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#99aeb8', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#A9BDC7', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#BACDD5', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#CCDBE2', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#DFEAEE', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#F3F7F9', get ratio() { return getRatio(this.color)}},
+            ]
+        },
+    ];
+    let stringPalette;
+    function formatPalette() {
+        let formattedPalette = JSON.parse(JSON.stringify(colorPalette));
+        formattedPalette.forEach(item => {
+            let name = item.swatch;
+            let colors = item.colors.reverse();
+            colors.forEach(color => {
+                if (color.name === '050'){
+                    color.name = '50';
+                }
+                color.name = name + '-' + color.name;
+                color.ratio = color.ratio.toString();
+            })
+        });
+        stringPalette = JSON.stringify(formattedPalette, null, 4);
+    }
+    formatPalette();
 </script>
 
 <style lang="scss">
     :global(*), :global(body) {
         text-align: left;
     }
-    section {
+    .swatches {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        gap:.5rem;
+        // gap:.5rem;
+        gap:0;
     }
-    div {
+    .palette {
         margin-bottom: 1.25rem;
+    }
+    .object {
+        margin-top: 4rem;
+    }
+
+    pre {
+        padding: 2rem;
+        border-radius: .5rem;
+        background: #f5f5f5;
+        font-family: 'Menlo', monospace;
+        font-size: .75rem;
     }
 </style>
 
-{#each palette as swatch}
-    <div>
-        <section>
+{#each colorPalette as swatch}
+    <div class="palette">
+        <section class="swatches">
             {#each swatch.colors.reverse() as {name, color, ratio}}
                 <Swatch name="{swatch.swatch}-{name}" {color} {ratio} />
             {/each}
         </section>
     </div>
 {/each}
+
+<section class="object">
+    <h2>The Palette Object</h2>
+    <p style="margin-bottom: 4rem;">I reformatted the palette object to use with the Figma plugin I made.</p>
+    <pre>{stringPalette}</pre>
+</section>

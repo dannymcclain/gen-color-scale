@@ -33,7 +33,7 @@ let formattedColor = color.toUpperCase();
     }
 
     .swatch {
-        aspect-ratio: 1;
+        aspect-ratio: 4/3;
         width: 100%;
         min-width: 8rem;
         height: auto;
@@ -44,7 +44,7 @@ let formattedColor = color.toUpperCase();
     h2 {
         margin: 0;
         padding: 0;
-        font-size: 1rem;
+        font-size: .92rem;
         font-weight: 700;
     }
 
