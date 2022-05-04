@@ -9,56 +9,13 @@
         }
 
     let palette = [
-        { swatch: 'Blue 2', colors: 
-
-            [
-                {name: '900', color: '#001C47', ratio: getRatio('#001C47')},
-                {name: '800', color: '#003075', ratio: getRatio('#003075')},
-                {name: '700', color: '#0044A3', ratio: getRatio('#0044A3')},
-                {name: '600', color: '#0158C4', ratio: getRatio('#0158C4')},
-                {name: '500-Base', color: '#176ed9', ratio: getRatio('#176ed9')},
-                {name: '400', color: '#3388F0', ratio: getRatio('#3388F0')},
-                {name: '300', color: '#60A2FF', ratio: getRatio('#60A2FF')},
-                {name: '200', color: '#90BDFF', ratio: getRatio('#90BDFF')},
-                {name: '100', color: '#C0D9FF', ratio: getRatio('#C0D9FF')},
-                {name: '050', color: '#F0F6FF', ratio: getRatio('#F0F6FF')},
-            ]
-            },
-        { swatch: 'Green 2', colors: 
-            [
-                {name: '900', color: '#003613', ratio: getRatio('#003613')},
-                {name: '800', color: '#00511F', ratio: getRatio('#00511F')},
-                {name: '700', color: '#00672B', ratio: getRatio('#00672B')},
-                {name: '600', color: '#007837', ratio: getRatio('#007837')},
-                {name: '500-Base', color: '#018443', ratio: getRatio('#018443')},
-                {name: '400', color: '#30A666', ratio: getRatio('#30A666')},
-                {name: '300', color: '#60C38A', ratio: getRatio('#60C38A')},
-                {name: '200', color: '#90DBAD', ratio: getRatio('#90DBAD')},
-                {name: '100', color: '#C0EED1', ratio: getRatio('#C0EED1')},
-                {name: '050', color: '#F0FCF4', ratio: getRatio('#F0FCF4')},
-            ]
-            },
-        { swatch: 'Green 3', colors: 
-            [
-                {name: '900', color: '#003607', ratio: getRatio('#003607')},
-                {name: '800', color: '#00520D', ratio: getRatio('#00520D')},
-                {name: '700', color: '#006816', ratio: getRatio('#006816')},
-                {name: '600', color: '#007920', ratio: getRatio('#007920')},
-                {name: '500-Base', color: '#00852C', ratio: getRatio('#00852C')},
-                {name: '400', color: '#30A750', ratio: getRatio('#30A750')},
-                {name: '300', color: '#60C476', ratio: getRatio('#60C476')},
-                {name: '200', color: '#90DB9D', ratio: getRatio('#90DB9D')},
-                {name: '100', color: '#C0EEC6', ratio: getRatio('#C0EEC6')},
-                {name: '050', color: '#F0FCF1', ratio: getRatio('#F0FCF1')},
-            ]
-            },
-        { swatch: 'Red 3', colors: 
+        { swatch: 'Red', colors: 
             [
                 {name: '900', color: '#470000', ratio: getRatio('#470000')},
                 {name: '800', color: '#750000', ratio: getRatio('#750000')},
                 {name: '700', color: '#A30000', ratio: getRatio('#A30000')},
                 {name: '600', color: '#CE000A', ratio: getRatio('#CE000A')},
-                {name: '500-Base', color: '#E41120', ratio: getRatio('#E41120')},
+                {name: '500', color: '#E41120', ratio: getRatio('#E41120')},
                 {name: '400', color: '#FA303B', ratio: getRatio('#FA303B')},
                 {name: '300', color: '#FF6060', ratio: getRatio('#FF6060')},
                 {name: '200', color: '#FF9090', ratio: getRatio('#FF9090')},
@@ -66,98 +23,85 @@
                 {name: '050', color: '#FFF0F0', ratio: getRatio('#FFF0F0')},
             ]
             },
-        { swatch: 'Red 2', colors: 
+        { swatch: 'Red2', colors: 
             [
-                {name: '900', color: '#470002', ratio: getRatio('#470002')},
-                {name: '800', color: '#75020B', ratio: getRatio('#75020B')},
-                {name: '700', color: '#A30F1A', ratio: getRatio('#A30F1A')},
-                {name: '600', color: '#D0232F', ratio: getRatio('#D0232F')},
-                {name: '500-Base', color: '#ea3e4a', ratio: getRatio('#ea3e4a')},
-                {name: '400', color: '#FC5460', ratio: getRatio('#FC5460')},
-                {name: '300', color: '#FF717C', ratio: getRatio('#FF717C')},
-                {name: '200', color: '#FF949D', ratio: getRatio('#FF949D')},
-                {name: '100', color: '#FFC0C3', ratio: getRatio('#FFC0C3')},
-                {name: '050', color: '#FFF0F0', ratio: getRatio('#FFF0F0')},
-            ]
-            },
-        { swatch: 'Red', colors: 
-            [
-                {name: '900', color: '#3D0004', ratio: getRatio('#3D0004')},
-                {name: '800', color: '#6E060E', ratio: getRatio('#6E060E')},
-                {name: '700', color: '#9E141E', ratio: getRatio('#9E141E')},
-                {name: '600', color: '#CA2A35', ratio: getRatio('#CA2A35')},
-                {name: '500', color: '#e74651', ratio: getRatio('#e74651')},
-                {name: '400', color: '#F85B66', ratio: getRatio('#F85B66')},
-                {name: '300', color: '#FF7780', ratio: getRatio('#FF7780')},
-                {name: '200', color: '#FF979F', ratio: getRatio('#FF979F')},
-                {name: '100', color: '#FFBEC3', ratio: getRatio('#FFBEC3')},
-                {name: '050', color: '#FFEBEC', ratio: getRatio('#FFEBEC')},
+                {name: '900', color: '#470000', ratio: getRatio('#470000')},
+                {name: '800', color: '#750000', ratio: getRatio('#750000')},
+                {name: '700', color: '#A30000', ratio: getRatio('#A30000')},
+                {name: '600', color: '#CE000A', ratio: getRatio('#CE000A')},
+                {name: '500', color: '#E41120', ratio: getRatio('#E41120')},
+                {name: '400', color: '#F92D3A', ratio: getRatio('#F92D3A')},
+                {name: '300', color: '#FF5A5A', ratio: getRatio('#FF5A5A')},
+                {name: '200', color: '#FF8787', ratio: getRatio('#FF8787')},
+                {name: '100', color: '#FFB4B4', ratio: getRatio('#FFB4B4')},
+                {name: '050', color: '#FFE0E0', ratio: getRatio('#FFE0E0')},
             ]
             },
         { swatch: 'Orange', colors: 
             [
-                {name: '900', color: '#3D2000', ratio: getRatio('#3D2000')},
-                {name: '800', color: '#6E3B04', ratio: getRatio('#6E3B04')},
-                {name: '700', color: '#9E5613', ratio: getRatio('#9E5613')},
-                {name: '600', color: '#CF7429', ratio: getRatio('#CF7429')},
-                {name: '500', color: '#fa9247', ratio: getRatio('#fa9247')},
-                {name: '400', color: '#FFA45B', ratio: getRatio('#FFA45B')},
-                {name: '300', color: '#FFB775', ratio: getRatio('#FFB775')},
-                {name: '200', color: '#FFCA96', ratio: getRatio('#FFCA96')},
-                {name: '100', color: '#FFDFBC', ratio: getRatio('#FFDFBC')},
-                {name: '050', color: '#FFF5EB', ratio: getRatio('#FFF5EB')},
+                {name: '900', color: '#471E00', ratio: getRatio('#471E00')},
+                {name: '800', color: '#753300', ratio: getRatio('#753300')},
+                {name: '700', color: '#A34A00', ratio: getRatio('#A34A00')},
+                {name: '600', color: '#D16100', ratio: getRatio('#D16100')},
+                {name: '500', color: '#FF7A14', ratio: getRatio('#FF7A14')},
+                {name: '400', color: '#FF9130', ratio: getRatio('#FF9130')},
+                {name: '300', color: '#FFA860', ratio: getRatio('#FFA860')},
+                {name: '200', color: '#FFC190', ratio: getRatio('#FFC190')},
+                {name: '100', color: '#FFDBC0', ratio: getRatio('#FFDBC0')},
+                {name: '050', color: '#FFF6F0', ratio: getRatio('#FFF6F0')},
             ]
             },
         { swatch: 'Yellow', colors: [
-            {name: '900', color: '#3D3200', ratio: getRatio('#3D3200')},
-            {name: '800', color: '#6E5802', ratio: getRatio('#6E5802')},
-            {name: '700', color: '#9E7A10', ratio: getRatio('#9E7A10')},
-            {name: '600', color: '#CF9B25', ratio: getRatio('#CF9B25')},
-            {name: '500', color: '#f9b943', ratio: getRatio('#f9b943')},
-            {name: '400', color: '#FFCA57', ratio: getRatio('#FFCA57')},
-            {name: '300', color: '#FFD972', ratio: getRatio('#FFD972')},
-            {name: '200', color: '#FFE793', ratio: getRatio('#FFE793')},
-            {name: '100', color: '#FFF2BC', ratio: getRatio('#FFF2BC')},
-            {name: '050', color: '#FFFCEB', ratio: getRatio('#FFFCEB')},
+            {name: '900', color: '#473D00', ratio: getRatio('#473D00')},
+            {name: '800', color: '#756000', ratio: getRatio('#756000')},
+            {name: '700', color: '#A38000', ratio: getRatio('#A38000')},
+            {name: '600', color: '#D19E0E', ratio: getRatio('#D19E0E')},
+            {name: '500', color: '#FFB829', ratio: getRatio('#FFB829')},
+            {name: '400', color: '#FFCA3E', ratio: getRatio('#FFCA3E')},
+            {name: '300', color: '#FFDA5B', ratio: getRatio('#FFDA5B')},
+            {name: '200', color: '#FFE787', ratio: getRatio('#FFE787')},
+            {name: '100', color: '#FFF2B4', ratio: getRatio('#FFF2B4')},
+            {name: '050', color: '#FFFBE0', ratio: getRatio('#FFFBE0')},
         ]
         },
         { swatch: 'Grass', colors: [
-            {name: '900', color: '#183D00', ratio: getRatio('#183D00')},
-            {name: '800', color: '#2D6E00', ratio: getRatio('#2D6E00')},
-            {name: '700', color: '#419300', ratio: getRatio('#419300')},
-            {name: '600', color: '#57B10D', ratio: getRatio('#57B10D')},
-            {name: '500', color: '#6dc723', ratio: getRatio('#6dc723')},
-            {name: '400', color: '#87DE3F', ratio: getRatio('#87DE3F')},
-            {name: '300', color: '#A1F060', ratio: getRatio('#A1F060')},
-            {name: '200', color: '#BCFB8D', ratio: getRatio('#BCFB8D')},
-            {name: '100', color: '#D7FFBC', ratio: getRatio('#D7FFBC')},
-            {name: '050', color: '#F3FFEB', ratio: getRatio('#F3FFEB')},
+            {name: '900', color: '#1A4700', ratio: getRatio('#1A4700')},
+            {name: '800', color: '#2A6D00', ratio: getRatio('#2A6D00')},
+            {name: '700', color: '#3B8B00', ratio: getRatio('#3B8B00')},
+            {name: '600', color: '#4DA300', ratio: getRatio('#4DA300')},
+            {name: '500', color: '#5EB40E', ratio: getRatio('#5EB40E')},
+            {name: '400', color: '#7ACE2D', ratio: getRatio('#7ACE2D')},
+            {name: '300', color: '#96E25A', ratio: getRatio('#96E25A')},
+            {name: '200', color: '#B2F187', ratio: getRatio('#B2F187')},
+            {name: '100', color: '#CFFBB4', ratio: getRatio('#CFFBB4')},
+            {name: '050', color: '#EBFFE0', ratio: getRatio('#EBFFE0')},
         ]
         },
-        { swatch: 'Green', colors: [
-            {name: '900', color: '#003814', ratio: getRatio('#003814')},
-            {name: '800', color: '#005C23', ratio: getRatio('#005C23')},
-            {name: '700', color: '#007A33', ratio: getRatio('#007A33')},
-            {name: '600', color: '#009043', ratio: getRatio('#009043')},
-            {name: '500', color: '#03a052', ratio: getRatio('#03a052')},
-            {name: '400', color: '#2FBE72', ratio: getRatio('#2FBE72')},
-            {name: '300', color: '#5ED692', ratio: getRatio('#5ED692')},
-            {name: '200', color: '#8DE9B2', ratio: getRatio('#8DE9B2')},
-            {name: '100', color: '#BCF6D1', ratio: getRatio('#BCF6D1')},
-            {name: '050', color: '#EBFDF1', ratio: getRatio('#EBFDF1')},
-        ]
-        },
+        { swatch: 'Green', colors: 
+            [
+                {name: '900', color: '#003607', ratio: getRatio('#003607')},
+                {name: '800', color: '#00520D', ratio: getRatio('#00520D')},
+                {name: '700', color: '#006816', ratio: getRatio('#006816')},
+                {name: '600', color: '#007920', ratio: getRatio('#007920')},
+                {name: '500', color: '#00852C', ratio: getRatio('#00852C')},
+                {name: '400', color: '#30A750', ratio: getRatio('#30A750')},
+                {name: '300', color: '#60C476', ratio: getRatio('#60C476')},
+                {name: '200', color: '#90DB9D', ratio: getRatio('#90DB9D')},
+                {name: '100', color: '#C0EEC6', ratio: getRatio('#C0EEC6')},
+                {name: '050', color: '#F0FCF1', ratio: getRatio('#F0FCF1')},
+            ]
+            },
         { swatch: 'Teal', colors: [
-            {name: '900', color: '#003D3D', ratio: getRatio('#003D3D')},
-            {name: '800', color: '#016E6E', ratio: getRatio('#016E6E')},
-            {name: '700', color: '#0C9C9E', ratio: getRatio('#0C9C9E')},
-            {name: '600', color: '#20BDC4', ratio: getRatio('#20BDC4')},
-            {name: '500', color: '#3ad8df', ratio: getRatio('#3ad8df')},
-            {name: '400', color: '#51EBF2', ratio: getRatio('#51EBF2')},
-            {name: '300', color: '#6FF9FF', ratio: getRatio('#6FF9FF')},
-            {name: '200', color: '#92FFFF', ratio: getRatio('#92FFFF')},
-            {name: '100', color: '#BCFFFF', ratio: getRatio('#BCFFFF')},
-            {name: '050', color: '#EBFFFF', ratio: getRatio('#EBFFFF')},
+            {name: '900', color: '#004747', ratio: getRatio('#004747')},
+            {name: '800', color: '#007575', ratio: getRatio('#007575')},
+            {name: '700', color: '#009CA2', ratio: getRatio('#009CA2')},
+            {name: '600', color: '#0AB8BF', ratio: getRatio('#0AB8BF')},
+            {name: '500', color: '#20CED5', ratio: getRatio('#20CED5')},
+            {name: '400', color: '#3AE3EA', ratio: getRatio('#3AE3EA')},
+            {name: '300', color: '#5AF3F9', ratio: getRatio('#5AF3F9')},
+            {name: '200', color: '#87FEFF', ratio: getRatio('#87FEFF')},
+            {name: '100', color: '#B4FFFF', ratio: getRatio('#B4FFFF')},
+            {name: '050', color: '#E0FFFF', ratio: getRatio('#E0FFFF')},
         ]
         },
         { swatch: 'Cyan', colors: [
@@ -173,19 +117,21 @@
             {name: '050', color: '#EBFDFF', ratio: getRatio('#EBFDFF')},
         ]
         },
-        { swatch: 'Deep Blue', colors: [
-            {name: '900', color: '#00183D', ratio: getRatio('#00183D')},
-            {name: '800', color: '#002C6E', ratio: getRatio('#002C6E')},
-            {name: '700', color: '#00419E', ratio: getRatio('#00419E')},
-            {name: '600', color: '#0157C2', ratio: getRatio('#0157C2')},
-            {name: '500', color: '#176ed9', ratio: getRatio('#176ed9')},
-            {name: '400', color: '#3387EF', ratio: getRatio('#3387EF')},
-            {name: '300', color: '#5EA1FF', ratio: getRatio('#5EA1FF')},
-            {name: '200', color: '#8DBCFF', ratio: getRatio('#8DBCFF')},
-            {name: '100', color: '#BCD7FF', ratio: getRatio('#BCD7FF')},
-            {name: '050', color: '#EBF3FF', ratio: getRatio('#EBF3FF')},
-        ]
-        },
+        { swatch: 'Blue', colors: 
+
+            [
+                {name: '900', color: '#001C47', ratio: getRatio('#001C47')},
+                {name: '800', color: '#003075', ratio: getRatio('#003075')},
+                {name: '700', color: '#0044A3', ratio: getRatio('#0044A3')},
+                {name: '600', color: '#0158C4', ratio: getRatio('#0158C4')},
+                {name: '500', color: '#176ed9', ratio: getRatio('#176ed9')},
+                {name: '400', color: '#3388F0', ratio: getRatio('#3388F0')},
+                {name: '300', color: '#60A2FF', ratio: getRatio('#60A2FF')},
+                {name: '200', color: '#90BDFF', ratio: getRatio('#90BDFF')},
+                {name: '100', color: '#C0D9FF', ratio: getRatio('#C0D9FF')},
+                {name: '050', color: '#F0F6FF', ratio: getRatio('#F0F6FF')},
+            ]
+            },
         { swatch: 'Violet', colors: [
             {name: '900', color: '#170D3D', ratio: getRatio('#170D3D')},
             {name: '800', color: '#2F1E6E', ratio: getRatio('#2F1E6E')},
@@ -279,7 +225,8 @@
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        gap:.5rem;
+        // gap:.5rem;
+        gap:0;
     }
     div {
         margin-bottom: 1.25rem;
@@ -294,4 +241,12 @@
             {/each}
         </section>
     </div>
+{/each}
+{#each palette as swatch}
+    <h3>{swatch.swatch}</h3>
+    <ul>
+        {#each swatch.colors as {name, color}}
+            <li>{swatch.swatch.toLowerCase()}-{name}: {color}</li>
+        {/each}
+    </ul>
 {/each}
