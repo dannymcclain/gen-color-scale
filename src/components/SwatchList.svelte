@@ -85,20 +85,6 @@
                 {name: '800', color: '#007575', get ratio() { return getRatio(this.color)}},
                 {name: '700', color: '#009CA2', get ratio() { return getRatio(this.color)}},
                 {name: '600', color: '#0AB8BF', get ratio() { return getRatio(this.color)}},
-                {name: '500', color: '#20ced5', get ratio() { return getRatio(this.color)}},
-                {name: '400', color: '#3AE4EB', get ratio() { return getRatio(this.color)}},
-                {name: '300', color: '#5CF4FA', get ratio() { return getRatio(this.color)}},
-                {name: '200', color: '#8AFEFF', get ratio() { return getRatio(this.color)}},
-                {name: '100', color: '#B8FFFF', get ratio() { return getRatio(this.color)}},
-                {name: '050', color: '#E6FFFF', get ratio() { return getRatio(this.color)}},
-            ]
-        },
-        { swatch: 'teal2', colors:
-            [
-                {name: '900', color: '#004747', get ratio() { return getRatio(this.color)}},
-                {name: '800', color: '#007575', get ratio() { return getRatio(this.color)}},
-                {name: '700', color: '#009CA2', get ratio() { return getRatio(this.color)}},
-                {name: '600', color: '#0AB8BF', get ratio() { return getRatio(this.color)}},
                 {name: '500', color: '#20CED5', get ratio() { return getRatio(this.color)}},
                 {name: '400', color: '#42DCE3', get ratio() { return getRatio(this.color)}},
                 {name: '300', color: '#67E8ED', get ratio() { return getRatio(this.color)}},
@@ -220,38 +206,64 @@
             ]
         },
     ];
+    let stringPalette;
+    function formatPalette() {
+        let formattedPalette = JSON.parse(JSON.stringify(colorPalette));
+        formattedPalette.forEach(item => {
+            let name = item.swatch;
+            let colors = item.colors.reverse();
+            colors.forEach(color => {
+                if (color.name === '050'){
+                    color.name = '50';
+                }
+                color.name = name + '-' + color.name;
+                color.ratio = color.ratio.toString();
+            })
+        });
+        stringPalette = JSON.stringify(formattedPalette, null, 4);
+    }
+    formatPalette();
 </script>
 
 <style lang="scss">
     :global(*), :global(body) {
         text-align: left;
     }
-    section {
+    .swatches {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         // gap:.5rem;
         gap:0;
     }
-    div {
+    .palette {
         margin-bottom: 1.25rem;
+    }
+    .object {
+        margin-top: 4rem;
+    }
+
+    pre {
+        padding: 2rem;
+        border-radius: .5rem;
+        background: #f5f5f5;
+        font-family: 'Menlo', monospace;
+        font-size: .75rem;
     }
 </style>
 
 {#each colorPalette as swatch}
-    <div>
-        <section>
+    <div class="palette">
+        <section class="swatches">
             {#each swatch.colors.reverse() as {name, color, ratio}}
                 <Swatch name="{swatch.swatch}-{name}" {color} {ratio} />
             {/each}
         </section>
     </div>
 {/each}
-{#each colorPalette as swatch}
-    <h3>{swatch.swatch}</h3>
-    <ul>
-        {#each swatch.colors as {name, color}}
-            <li>{swatch.swatch.toLowerCase()}-{name}: {color}</li>
-        {/each}
-    </ul>
-{/each}
+
+<section class="object">
+    <h2>The Palette Object</h2>
+    <p style="margin-bottom: 4rem;">I reformatted the palette object to use with the Figma plugin I made.</p>
+    <pre>{stringPalette}</pre>
+</section>
