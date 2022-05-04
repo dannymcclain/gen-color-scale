@@ -12,13 +12,13 @@
 		<h2>Scale Settings I used</h2>
 		<ul>
 			<li>Dark Colors Amount: <code>4</code></li>
-			<li>Darkness: <code>76%</code></li>
+			<li>Darkness: <code>72%</code></li>
 			<li>Dark Color Hue Angle: <code>0</code></li>
-			<li>Dark Colors Saturation: <code>92%</code></li>
+			<li>Dark Colors Saturation: <code>90%</code></li>
 			<li>Light Colors Amount: <code>5</code></li>
-			<li>Lightness: <code>92%</code></li>
+			<li>Lightness: <code>90%</code></li>
 			<li>Light Color Hue Angle: <code>0</code></li>
-			<li>Light Colors Saturation: <code>96%</code></li>
+			<li>Light Colors Saturation: <code>94%</code></li>
 		</ul>
 	</section>
 	
