@@ -93,6 +93,20 @@
                 {name: '050', color: '#E6FFFF', get ratio() { return getRatio(this.color)}},
             ]
         },
+        { swatch: 'teal2', colors:
+            [
+                {name: '900', color: '#004747', get ratio() { return getRatio(this.color)}},
+                {name: '800', color: '#007575', get ratio() { return getRatio(this.color)}},
+                {name: '700', color: '#009CA2', get ratio() { return getRatio(this.color)}},
+                {name: '600', color: '#0AB8BF', get ratio() { return getRatio(this.color)}},
+                {name: '500', color: '#20CED5', get ratio() { return getRatio(this.color)}},
+                {name: '400', color: '#42DCE3', get ratio() { return getRatio(this.color)}},
+                {name: '300', color: '#67E8ED', get ratio() { return getRatio(this.color)}},
+                {name: '200', color: '#8EF2F6', get ratio() { return getRatio(this.color)}},
+                {name: '100', color: '#B9F9FB', get ratio() { return getRatio(this.color)}},
+                {name: '050', color: '#E6FDFE', get ratio() { return getRatio(this.color)}},
+            ]
+        },
         { swatch: 'sky', colors:
             [
                 {name: '900', color: '#003E47', get ratio() { return getRatio(this.color)}},
