@@ -9,7 +9,16 @@
         }
     
         let colorPalette = [
-        { swatch: 'red', colors:
+        { swatch: 'built', colors:
+            [
+                {name: 'red', color: '#db351f', get ratio() { return getRatio(this.color)}},
+                {name: 'navy-muted', color: '#272f46', get ratio() { return getRatio(this.color)}},
+                {name: 'navy', color: '#0c1733', get ratio() { return getRatio(this.color)}},
+                {name: 'white', color: '#fff', get ratio() { return getRatio(this.color)}},
+                
+            ]
+        },
+        { swatch: 'rose', colors:
             [
                 {name: '900', color: '#470000', get ratio() { return getRatio(this.color)}},
                 {name: '800', color: '#750007', get ratio() { return getRatio(this.color)}},
@@ -223,6 +232,13 @@
         stringPalette = JSON.stringify(formattedPalette, null, 4);
     }
     formatPalette();
+
+    function justAnIdea() {
+        let someSwatch = JSON.parse(JSON.stringify(colorPalette[0].colors[0]));
+        someSwatch.readability = tinycolor.isReadable(someSwatch.color, "#fff");
+        console.log(someSwatch);
+    }
+    justAnIdea();
 </script>
 
 <style lang="scss">
