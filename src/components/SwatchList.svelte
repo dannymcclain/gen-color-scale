@@ -233,12 +233,22 @@
     }
     formatPalette();
 
-    function justAnIdea() {
-        let someSwatch = JSON.parse(JSON.stringify(colorPalette[0].colors[0]));
-        someSwatch.readability = tinycolor.isReadable(someSwatch.color, "#fff");
-        console.log(someSwatch);
+    // function justAnIdea() {
+    //     let someSwatch = JSON.parse(JSON.stringify(colorPalette[0].colors[0]));
+    //     someSwatch.readability = tinycolor.isReadable(someSwatch.color, "#fff");
+    //     console.log(someSwatch);
+    // }
+    // justAnIdea();
+
+    function updateClipboard(newClip) {
+            navigator.clipboard.writeText(newClip).then(function() {
+            /* clipboard successfully set */
+                console.log('Copied!')
+        }, function() {
+            /* clipboard write failed */
+            console.log('Failed.')
+            });
     }
-    justAnIdea();
 </script>
 
 <style lang="scss">
@@ -281,5 +291,6 @@
 <section class="object">
     <h2>The Palette Object</h2>
     <p style="margin-bottom: 4rem;">I reformatted the palette object to use with the Figma plugin I made.</p>
+    <button on:click={() => updateClipboard(stringPalette)}>Copy</button>
     <pre>{stringPalette}</pre>
 </section>
