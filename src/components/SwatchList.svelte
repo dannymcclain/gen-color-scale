@@ -231,9 +231,9 @@
                     "description": "slate-800, 9.64"
                 },
                 {
-                    "name": "fg/fg-muted",
-                    "color": "#43444F",
-                    "description": "slate-800, 9.64"
+                    "name": "fg/fg-subtle",
+                    "color": "#5E606D",
+                    "description": "slate-700, 6.23"
                 },
                 {
                     "name": "fg/fg-disabled",
@@ -293,7 +293,189 @@
             ]
         }
     ];
+    
+    let functionalRoles = [
+        {
+            "swatch": "primary",
+            "colors": [
+                {
+                    "name": "fg-primary",
+                    "color": "#1369d1",
+                    "description": "blue-600, 5.29"
+                },
+                {
+                    "name": "divider-primary",
+                    "color": "#8ac3ff",
+                    "description": "blue-200, 1.85"
+                },
+                {
+                    "name": "bg-primary",
+                    "color": "#e6f2ff",
+                    "description": "blue-50, 1.13"
+                },
+                {
+                    "name": "bg-primaryEmphasis",
+                    "color": "#1369d1",
+                    "description": "blue-600, 5.29"
+                }
+            ]
+        },
+        {
+            "swatch": "positive",
+            "colors": [
+                {
+                    "name": "fg-positive",
+                    "color": "#00791b",
+                    "description": "green-700, 5.6"
+                },
+                {
+                    "name": "divider-positive",
+                    "color": "#5cd178",
+                    "description": "green-300, 1.94"
+                },
+                {
+                    "name": "bg-positive",
+                    "color": "#e6fce9",
+                    "description": "green-50, 1.08"
+                },
+                {
+                    "name": "bg-positiveEmphasis",
+                    "color": "#00791b",
+                    "description": "green-700, 5.6"
+                }
+            ]
+        },
+        {
+            "swatch": "negative",
+            "colors": [
+                {
+                    "name": "fg-negative",
+                    "color": "#d01b28",
+                    "description": "rose-600, 5.43"
+                },
+                {
+                    "name": "divider-negative",
+                    "color": "#ff8b94",
+                    "description": "rose-200, 2.24"
+                },
+                {
+                    "name": "bg-negative",
+                    "color": "#ffe6e6",
+                    "description": "rose-50, 1.19"
+                },
+                {
+                    "name": "bg-negativeEmphasis",
+                    "color": "#d01b28",
+                    "description": "rose-600, 5.43"
+                }
+            ]
+        },
+        {
+            "swatch": "warning",
+            "colors": [
+                {
+                    "name": "fg-warning",
+                    "color": "#a35200",
+                    "description": "orange-700, 5.58"
+                },
+                {
+                    "name": "divider-warning",
+                    "color": "#ffc48a",
+                    "description": "orange-200, 1.55"
+                },
+                {
+                    "name": "bg-warning",
+                    "color": "#fff2e6",
+                    "description": "orange-50, 1.1"
+                },
+                {
+                    "name": "bg-warningEmphasis",
+                    "color": "#a35200",
+                    "description": "orange-700, 5.58"
+                }
+            ]
+        },
+        {
+            "swatch": "attention",
+            "colors": [
+                {
+                    "name": "fg-attention",
+                    "color": "#756000",
+                    "description": "yellow-800, 6.12"
+                },
+                {
+                    "name": "divider-attention",
+                    "color": "#ffda5c",
+                    "description": "yellow-300, 1.36"
+                },
+                {
+                    "name": "bg-attention",
+                    "color": "#fffbe6",
+                    "description": "yellow-50, 1.04"
+                },
+                {
+                    "name": "bg-attentionEmphasis",
+                    "color": "#756000",
+                    "description": "yellow-800, 6.12"
+                }
+            ]
+        },
+        {
+            "swatch": "success",
+            "colors": [
+                {
+                    "name": "fg-success",
+                    "color": "#2a6d00",
+                    "description": "grass-800, 6.39"
+                },
+                {
+                    "name": "divider-success",
+                    "color": "#97e35c",
+                    "description": "grass-300, 1.56"
+                },
+                {
+                    "name": "bg-success",
+                    "color": "#efffe6",
+                    "description": "grass-50, 1.04"
+                },
+                {
+                    "name": "bg-successEmphasis",
+                    "color": "#2a6d00",
+                    "description": "grass-800, 6.39"
+                }
+            ]
+        },
+        {
+            "swatch": "info",
+            "colors": [
+                {
+                    "name": "fg-info",
+                    "color": "#006075",
+                    "description": "sky-800, 7.17"
+                },
+                {
+                    "name": "divider-info",
+                    "color": "#8ae7ff",
+                    "description": "sky-200, 1.4"
+                },
+                {
+                    "name": "bg-info",
+                    "color": "#e6fcff",
+                    "description": "sky-50, 1.06"
+                },
+                {
+                    "name": "bg-infoEmphasis",
+                    "color": "#007fa3",
+                    "description": "sky-700, 4.6"
+                }
+            ]
+        }
+    ];
+
     let stringFunctionalFoundations = JSON.stringify(functionalFoundations, null, 4);
+    let stringFunctionalRoles = JSON.stringify(functionalRoles, null, 4);
+
+
     let stringColorScale;
     function formatPalette() {
         let formattedPalette = JSON.parse(JSON.stringify(colorPalette));
@@ -312,13 +494,6 @@
         stringColorScale = JSON.stringify(formattedPalette, null, 4);
     }
     formatPalette();
-
-    // function justAnIdea() {
-    //     let someSwatch = JSON.parse(JSON.stringify(colorPalette[0].colors[0]));
-    //     someSwatch.readability = tinycolor.isReadable(someSwatch.color, "#fff");
-    //     console.log(someSwatch);
-    // }
-    // justAnIdea();
 
     function updateClipboard(newClip) {
             navigator.clipboard.writeText(newClip).then(function() {
@@ -371,6 +546,26 @@
     </div>
 {/each}
 
+{#each functionalFoundations as swatch}
+    <div class="palette">
+        <section class="swatches">
+            {#each swatch.colors as {name, color, description}}
+                <Swatch {name} {color} {description} />
+            {/each}
+        </section>
+    </div>
+{/each}
+
+{#each functionalRoles as swatch}
+    <div class="palette">
+        <section class="swatches">
+            {#each swatch.colors as {name, color, description}}
+                <Swatch {name} {color} {description} />
+            {/each}
+        </section>
+    </div>
+{/each}
+
 <section class="object">
     <h2>Color Scale</h2>
     <!-- <p>A reformatted object of the color scale to use with the Figma plugin I made.</p> -->
@@ -381,4 +576,9 @@
     <h2>Functional Foundations</h2>
     <button on:click={() => updateClipboard(stringFunctionalFoundations)}>Copy</button>
     <pre>{stringFunctionalFoundations}</pre>
+</section>
+<section class="object">
+    <h2>Functional Roles</h2>
+    <button on:click={() => updateClipboard(stringFunctionalRoles)}>Copy</button>
+    <pre>{stringFunctionalRoles}</pre>
 </section>

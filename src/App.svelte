@@ -4,7 +4,7 @@
 
 <main>
 	<section>
-		<h1>Generated color scale</h1>
+		<h1>Color scale</h1>
 		<p>I plugged some hand-picked swatch colors (the 500's) into <a href="https://hihayk.github.io/scale/#4/6/50/80/-51/67/20/14/1D9A6C/29/154/108/white">Scale</a> to generate the rest of the palette.</p>
 		<p>I also used <a href="https://github.com/bgrins/TinyColor">tinycolor.js</a> to compute the contrast ratio of each swatch (against white).</p> 
 	</section>

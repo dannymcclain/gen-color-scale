@@ -2,6 +2,7 @@
 export let name;
 export let color;
 export let ratio;
+export let description;
 
 let formattedName = name.toLowerCase();
 let formattedColor = color.toUpperCase();
@@ -15,7 +16,12 @@ let formattedColor = color.toUpperCase();
     <div class="details">
         <h2>{formattedName}</h2>
         <p>{formattedColor}</p>
-        <p>{ratio}</p>
+        {#if ratio}
+            <p>{ratio}</p>
+        {/if}
+        {#if description}
+            <p>{description}</p>
+        {/if}
     </div>
 </section>
 
