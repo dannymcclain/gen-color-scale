@@ -295,26 +295,26 @@
     ];
     
     let functionalRoles = [
-        {
+            {
             "swatch": "primary",
             "colors": [
                 {
-                    "name": "fg-primary",
+                    "name": "primary/fg-primary",
                     "color": "#1369d1",
                     "description": "blue-600, 5.29"
                 },
                 {
-                    "name": "divider-primary",
+                    "name": "primary/divider-primary",
                     "color": "#8ac3ff",
                     "description": "blue-200, 1.85"
                 },
                 {
-                    "name": "bg-primary",
+                    "name": "primary/bg-primary",
                     "color": "#e6f2ff",
                     "description": "blue-50, 1.13"
                 },
                 {
-                    "name": "bg-primaryEmphasis",
+                    "name": "primary/bg-primaryEmphasis",
                     "color": "#1369d1",
                     "description": "blue-600, 5.29"
                 }
@@ -324,22 +324,22 @@
             "swatch": "positive",
             "colors": [
                 {
-                    "name": "fg-positive",
+                    "name": "positive/fg-positive",
                     "color": "#00791b",
                     "description": "green-700, 5.6"
                 },
                 {
-                    "name": "divider-positive",
+                    "name": "positive/divider-positive",
                     "color": "#5cd178",
                     "description": "green-300, 1.94"
                 },
                 {
-                    "name": "bg-positive",
+                    "name": "positive/bg-positive",
                     "color": "#e6fce9",
                     "description": "green-50, 1.08"
                 },
                 {
-                    "name": "bg-positiveEmphasis",
+                    "name": "positive/bg-positiveEmphasis",
                     "color": "#00791b",
                     "description": "green-700, 5.6"
                 }
@@ -349,22 +349,22 @@
             "swatch": "negative",
             "colors": [
                 {
-                    "name": "fg-negative",
+                    "name": "negative/fg-negative",
                     "color": "#d01b28",
                     "description": "rose-600, 5.43"
                 },
                 {
-                    "name": "divider-negative",
+                    "name": "negative/divider-negative",
                     "color": "#ff8b94",
                     "description": "rose-200, 2.24"
                 },
                 {
-                    "name": "bg-negative",
+                    "name": "negative/bg-negative",
                     "color": "#ffe6e6",
                     "description": "rose-50, 1.19"
                 },
                 {
-                    "name": "bg-negativeEmphasis",
+                    "name": "negative/bg-negativeEmphasis",
                     "color": "#d01b28",
                     "description": "rose-600, 5.43"
                 }
@@ -374,22 +374,22 @@
             "swatch": "warning",
             "colors": [
                 {
-                    "name": "fg-warning",
+                    "name": "warning/fg-warning",
                     "color": "#a35200",
                     "description": "orange-700, 5.58"
                 },
                 {
-                    "name": "divider-warning",
+                    "name": "warning/divider-warning",
                     "color": "#ffc48a",
                     "description": "orange-200, 1.55"
                 },
                 {
-                    "name": "bg-warning",
+                    "name": "warning/bg-warning",
                     "color": "#fff2e6",
                     "description": "orange-50, 1.1"
                 },
                 {
-                    "name": "bg-warningEmphasis",
+                    "name": "warning/bg-warningEmphasis",
                     "color": "#a35200",
                     "description": "orange-700, 5.58"
                 }
@@ -399,22 +399,22 @@
             "swatch": "attention",
             "colors": [
                 {
-                    "name": "fg-attention",
+                    "name": "attention/fg-attention",
                     "color": "#756000",
                     "description": "yellow-800, 6.12"
                 },
                 {
-                    "name": "divider-attention",
+                    "name": "attention/divider-attention",
                     "color": "#ffda5c",
                     "description": "yellow-300, 1.36"
                 },
                 {
-                    "name": "bg-attention",
+                    "name": "attention/bg-attention",
                     "color": "#fffbe6",
                     "description": "yellow-50, 1.04"
                 },
                 {
-                    "name": "bg-attentionEmphasis",
+                    "name": "attention/bg-attentionEmphasis",
                     "color": "#756000",
                     "description": "yellow-800, 6.12"
                 }
@@ -424,22 +424,22 @@
             "swatch": "success",
             "colors": [
                 {
-                    "name": "fg-success",
+                    "name": "success/fg-success",
                     "color": "#2a6d00",
                     "description": "grass-800, 6.39"
                 },
                 {
-                    "name": "divider-success",
+                    "name": "success/divider-success",
                     "color": "#97e35c",
                     "description": "grass-300, 1.56"
                 },
                 {
-                    "name": "bg-success",
+                    "name": "success/bg-success",
                     "color": "#efffe6",
                     "description": "grass-50, 1.04"
                 },
                 {
-                    "name": "bg-successEmphasis",
+                    "name": "success/bg-successEmphasis",
                     "color": "#2a6d00",
                     "description": "grass-800, 6.39"
                 }
@@ -449,22 +449,22 @@
             "swatch": "info",
             "colors": [
                 {
-                    "name": "fg-info",
+                    "name": "info/fg-info",
                     "color": "#006075",
                     "description": "sky-800, 7.17"
                 },
                 {
-                    "name": "divider-info",
+                    "name": "info/divider-info",
                     "color": "#8ae7ff",
                     "description": "sky-200, 1.4"
                 },
                 {
-                    "name": "bg-info",
+                    "name": "info/bg-info",
                     "color": "#e6fcff",
                     "description": "sky-50, 1.06"
                 },
                 {
-                    "name": "bg-infoEmphasis",
+                    "name": "info/bg-infoEmphasis",
                     "color": "#007fa3",
                     "description": "sky-700, 4.6"
                 }
