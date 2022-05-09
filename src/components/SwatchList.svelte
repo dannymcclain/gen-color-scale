@@ -14,7 +14,7 @@
                 {name: 'red', color: '#db351f', get ratio() { return getRatio(this.color)}},
                 {name: 'navy-muted', color: '#272f46', get ratio() { return getRatio(this.color)}},
                 {name: 'navy', color: '#0c1733', get ratio() { return getRatio(this.color)}},
-                {name: 'white', color: '#fff', get ratio() { return getRatio(this.color)}},
+                {name: 'white', color: '#ffffff', get ratio() { return getRatio(this.color)}},
                 
             ]
         },
@@ -215,7 +215,86 @@
             ]
         },
     ];
-    let stringPalette;
+    
+    let functionalFoundations = [
+        {
+            "swatch": "foreground",
+            "colors": [
+                {
+                    "name": "fg/fg-default",
+                    "color": "#0c1733",
+                    "description": "built-navy, 17.71"
+                },
+                {
+                    "name": "fg/fg-muted",
+                    "color": "#43444F",
+                    "description": "slate-800, 9.64"
+                },
+                {
+                    "name": "fg/fg-muted",
+                    "color": "#43444F",
+                    "description": "slate-800, 9.64"
+                },
+                {
+                    "name": "fg/fg-disabled",
+                    "color": "#9698a6",
+                    "description": "slate-500, 2.86"
+                },
+                {
+                    "name": "fg/fg-roleEmphasis",
+                    "color": "#FFFFFF",
+                    "description": "built-white, 1"
+                }
+            ]
+        },
+        {
+            "swatch": "background",
+            "colors": [
+                {
+                    "name": "bg/bg-default",
+                    "color": "#FFFFFF",
+                    "description": "built-white, 1"
+                },
+                {
+                    "name": "bg/bg-subtle",
+                    "color": "#f3f7f9",
+                    "description": "mist-50, 1.08"
+                },
+                {
+                    "name": "bg/bg-heavy",
+                    "color": "#dfeaee",
+                    "description": "mist-100, 1.23"
+                }
+            ]
+        },
+        {
+            "swatch": "divider",
+            "colors": [
+                {
+                    "name": "divider/divider-faint",
+                    "color": "#F4F4F7",
+                    "description": "slate-50, 1.1"
+                },
+                {
+                    "name": "divider/divider-light",
+                    "color": "#E0E1E8",
+                    "description": "slate-100, 1.3"
+                },
+                {
+                    "name": "divider/divider-default",
+                    "color": "#CDCED8",
+                    "description": "slate-200, 1.57"
+                },
+                {
+                    "name": "divider/divider-heavy",
+                    "color": "#A8AAB7",
+                    "description": "slate-400, 2.31"
+                }
+            ]
+        }
+    ];
+    let stringFunctionalFoundations = JSON.stringify(functionalFoundations, null, 4);
+    let stringColorScale;
     function formatPalette() {
         let formattedPalette = JSON.parse(JSON.stringify(colorPalette));
         formattedPalette.forEach(item => {
@@ -226,10 +305,11 @@
                     color.name = '50';
                 }
                 color.name = name + '-' + color.name;
-                color.ratio = color.ratio.toString();
+                color['description'] = color['ratio'];
+                color.description = color.color + ', ' + color.ratio.toString();
             })
         });
-        stringPalette = JSON.stringify(formattedPalette, null, 4);
+        stringColorScale = JSON.stringify(formattedPalette, null, 4);
     }
     formatPalette();
 
@@ -271,10 +351,13 @@
 
     pre {
         padding: 2rem;
+        margin-top: 2rem;
         border-radius: .5rem;
         background: #f5f5f5;
         font-family: 'Menlo', monospace;
         font-size: .75rem;
+        height: 20rem;
+        overflow: scroll;
     }
 </style>
 
@@ -289,8 +372,13 @@
 {/each}
 
 <section class="object">
-    <h2>The Palette Object</h2>
-    <p style="margin-bottom: 4rem;">I reformatted the palette object to use with the Figma plugin I made.</p>
-    <button on:click={() => updateClipboard(stringPalette)}>Copy</button>
-    <pre>{stringPalette}</pre>
+    <h2>Color Scale</h2>
+    <!-- <p>A reformatted object of the color scale to use with the Figma plugin I made.</p> -->
+    <button on:click={() => updateClipboard(stringColorScale)}>Copy</button>
+    <pre>{stringColorScale}</pre>
+</section>
+<section class="object">
+    <h2>Functional Foundations</h2>
+    <button on:click={() => updateClipboard(stringFunctionalFoundations)}>Copy</button>
+    <pre>{stringFunctionalFoundations}</pre>
 </section>
