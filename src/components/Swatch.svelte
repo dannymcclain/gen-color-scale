@@ -27,7 +27,7 @@ let formattedColor = color.toUpperCase();
 
 <style lang="scss">
     section {
-        width: 100%;
+        // width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -39,10 +39,8 @@ let formattedColor = color.toUpperCase();
     }
 
     .swatch {
-        aspect-ratio: 4/3;
-        width: 100%;
-        min-width: 8rem;
-        height: auto;
+        width: 120px;
+        height: 80px;
         padding: 0;
         margin: 0;
     }
