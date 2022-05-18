@@ -27,20 +27,24 @@ export let description;
 
 <style lang="scss">
     section {
-        // width: 100%;
+        width: auto;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
+        gap: 8px
     }
 
     .details {
-        margin-top: .5rem;
+        width: auto;
+        flex: 1;
     }
 
     .swatch {
+        flex: 1;
         width: 120px;
         height: 80px;
+        border-radius: 3px;
         padding: 0;
         margin: 0;
     }
@@ -48,12 +52,12 @@ export let description;
     h2 {
         margin: 0;
         padding: 0;
-        font-size: .92rem;
+        font-size: .8rem;
         font-weight: 700;
     }
 
     p {
-        font-size: .75rem;
+        font-size: .6rem;
         margin: 0;
         padding: 0;
         color: #999;
