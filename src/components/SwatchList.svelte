@@ -389,13 +389,15 @@
     }
     .swatches {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
-        // gap:.5rem;
-        gap:0;
+        gap:.5rem;
     }
     .palette {
-        margin-bottom: 1.25rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap:.5rem;
     }
     .object {
         margin-top: 4rem;
@@ -412,12 +414,12 @@
         overflow: scroll;
     }
 </style>
+<div class="palette">
 {#each colorPalette as swatch}
-    <div class="palette">
         <section class="swatches">
             {#each swatch.colors as {name, color, ratio}}
                 <Swatch {name} {color} {ratio} />
             {/each}
         </section>
-    </div>
 {/each}
+</div>
