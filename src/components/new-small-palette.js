@@ -1,14 +1,4 @@
-<script>
-    import Swatch from './Swatch.svelte'
-    import tinycolor from '../tinycolor'
-
-    function getRatio(swatch){
-            let fullRatio = tinycolor.readability(swatch, '#fff');
-            let ratio = Math.round((fullRatio + Number.EPSILON) * 100) / 100;
-            return ratio;
-        }
-    
-        let colorPalette = [
+[
     {
         swatch: 'brand', colors: [
             {
@@ -379,45 +369,4 @@
                 get ratio() { return getRatio(this.color) }
             }]
     }
-];
-
-</script>
-
-<style lang="scss">
-    :global(*), :global(body) {
-        text-align: left;
-    }
-    .swatches {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        // gap:.5rem;
-        gap:0;
-    }
-    .palette {
-        margin-bottom: 1.25rem;
-    }
-    .object {
-        margin-top: 4rem;
-    }
-
-    pre {
-        padding: 2rem;
-        margin-top: 2rem;
-        border-radius: .5rem;
-        background: #f5f5f5;
-        font-family: 'Menlo', monospace;
-        font-size: .75rem;
-        height: 20rem;
-        overflow: scroll;
-    }
-</style>
-{#each colorPalette as swatch}
-    <div class="palette">
-        <section class="swatches">
-            {#each swatch.colors as {name, color, ratio}}
-                <Swatch {name} {color} {ratio} />
-            {/each}
-        </section>
-    </div>
-{/each}
+]
