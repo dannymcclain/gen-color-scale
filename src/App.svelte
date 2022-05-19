@@ -4,9 +4,11 @@
 
 <main>
 	<section>
-		<h1>Color scale</h1>
-		<p>I plugged some hand-picked swatch colors (the 500's) into <a href="https://hihayk.github.io/scale/#4/6/50/80/-51/67/20/14/1D9A6C/29/154/108/white">Scale</a> to generate the rest of the palette.</p>
-		<p>I also used <a href="https://github.com/bgrins/TinyColor">tinycolor.js</a> to compute the contrast ratio of each swatch (against white).</p> 
+		<h1>Color Palette</h1>
+		<p>The “weights” of these updated swatches (50, 100, etc.) have been carefully picked (using a Figma plugin called <a href="https://www.figma.com/community/plugin/748533339900865323/Contrast">Contrast</a>) to have approximately the same contrast ratios.</p>
+		<p>I think this makes the palette feel a little more unified, predictable, and usable.</p>
+		<p>I also think in general these swatches have a better vibe than the previous ones.</p>
+		<p>I used <a href="https://github.com/bgrins/TinyColor">tinycolor.js</a> to compute the exact contrast ratio of each swatch (against white) and display it under the HEX code.</p> 
 	</section>
 		
 	<SwatchList />
@@ -33,6 +35,11 @@
 
 	section {
 		margin-bottom: 4rem;
+		max-width: 40rem;
+
+		& p {
+			line-height: 1.6;
+		}
 	}
 
 	ul {
