@@ -179,7 +179,7 @@
     .swatches {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         // gap:.5rem;
         gap:0;
     }

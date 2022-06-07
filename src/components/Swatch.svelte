@@ -27,11 +27,12 @@ let formattedColor = color.toUpperCase();
 
 <style lang="scss">
     section {
-        width: 100%;
+        // width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        margin-bottom: 8px;
     }
 
     .details {
@@ -39,12 +40,15 @@ let formattedColor = color.toUpperCase();
     }
 
     .swatch {
-        aspect-ratio: 4/3;
-        width: 100%;
-        min-width: 8rem;
+        aspect-ratio: 1/1;
+        width: 144px;
+        border-radius: 4px;
         height: auto;
         padding: 0;
         margin: 0;
+    }
+    .swatch:not(last-child) {
+        margin-right: 8px;
     }
 
     h2 {
