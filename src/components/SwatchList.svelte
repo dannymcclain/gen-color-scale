@@ -130,34 +130,7 @@
     { name: 'stone-500', color: '#8A96A3', get ratio() { return getRatio(this.color)} },
     { name: 'stone-600', color: '#6C7784', get ratio() { return getRatio(this.color)} },
     { name: 'stone-700', color: '#5E6873', get ratio() { return getRatio(this.color)} },
-    { name: 'stone-800', color: '#3E444C', get ratio() { return getRatio(this.color)} }]},    
-{ swatch: 'divider', colors: [
-    { name: '', color: '', ratio: '' },
-    { name: '', color: '', ratio: '' },
-    { name: '', color: '', ratio: '' },
-    { name: '', color: '', ratio: '' },
-    { name: '', color: '', ratio: '' },
-    { name: '', color: '', ratio: '' },
-    { name: '', color: '', ratio: '' },
-    { name: '', color: '', ratio: '' }]},    
-{ swatch: 'slate', colors: [
-    { name: 'slate-50', color: '#F4F4F6', get ratio() { return getRatio(this.color)} },
-    { name: 'slate-100', color: '#E2E3E9', get ratio() { return getRatio(this.color)} },
-    { name: 'slate-300', color: '#C2C4CB', get ratio() { return getRatio(this.color)} },
-    { name: 'slate-400', color: '#AAACB6', get ratio() { return getRatio(this.color)} },
-    { name: 'slate-500', color: '#9194A1', get ratio() { return getRatio(this.color)} },
-    { name: 'slate-600', color: '#717484', get ratio() { return getRatio(this.color)} },
-    { name: 'slate-700', color: '#606371', get ratio() { return getRatio(this.color)} },
-    { name: 'slate-800', color: '#42444D', get ratio() { return getRatio(this.color)} }]},
-    { swatch: 'mist', colors: [
-    { name: 'mist-50', color: '#F4F5F6', get ratio() { return getRatio(this.color)} },
-    { name: 'mist-100', color: '#E5E9EB', get ratio() { return getRatio(this.color)} },
-    { name: 'mist-300', color: '#BEC6CA', get ratio() { return getRatio(this.color)} },
-    { name: 'mist-400', color: '#A5B0B6', get ratio() { return getRatio(this.color)} },
-    { name: 'mist-500', color: '#84969F', get ratio() { return getRatio(this.color)} },
-    { name: 'mist-600', color: '#6A7981', get ratio() { return getRatio(this.color)} },
-    { name: 'mist-700', color: '#5A6A72', get ratio() { return getRatio(this.color)} },
-    { name: 'mist-800', color: '#3A454A', get ratio() { return getRatio(this.color)} }]}  
+    { name: 'stone-800', color: '#3E444C', get ratio() { return getRatio(this.color)} }]}
 ];
 
 
